@@ -1,7 +1,7 @@
 (function ($) {
     "use strict";
 
-    var $window = $(window), $body = $('body');
+    let $window = $(window), $body = $('body');
 
 
     // ***************** sticky menu **********
@@ -64,30 +64,5 @@
         },
     });
 
-    // company logo slider 
-    var company_logo_slider = new Swiper('.company-slider .swiper-container', {
-        slidesPerView: 5,
-        autoplay: true,
-        speed: 1500,
-        loop: true,
-
-        breakpoints: {
-            0: {
-                slidesPerView: 1,
-            },
-            576: {
-                slidesPerView: 2,
-            },
-            768: {
-                slidesPerView: 3,
-            },
-            992: {
-                slidesPerView: 4,
-            },
-            1200: {
-                slidesPerView: 5,
-            },
-        }
-    });
     
 })(jQuery);
