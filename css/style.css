@@ -1283,6 +1283,135 @@ textarea {
     margin-right: 0px;
 }
 
+/* ***************** */
+
+.newsletter-area {
+    padding: 40px 30px;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    z-index: 1;
+    flex-direction: column;
+}
+
+.newsletter-area-style-1 {
+    background: #fadad3;
+    border-radius: 30px;
+}
+
+.newsletter-area-style-1 .content p {
+    color: #111;
+}
+
+.newsletter-area::after {
+    position: absolute;
+    content: "";
+    width: 5px;
+    height: 200px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    border-radius: 10px;
+    visibility: hidden;
+}
+
+.newsletter-area .content {
+    position: relative;
+    margin-bottom: 35px;
+    width: 100%;
+}
+
+.newsletter-area .content:last-child {
+    margin-bottom: 0;
+}
+
+.newsletter-area .content-left {
+    text-align: left;
+}
+
+.newsletter-area .content-right {
+    text-align: left;
+}
+
+.newsletter-area .content .title {
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.458;
+    margin-bottom: 5px;
+}
+
+.newsletter-area .content p {
+    margin-bottom: 15px;
+}
+
+.newsletter-area .content .apps-btn {
+    text-align: left;
+}
+
+.newsletter-area .content .apps-btn a {
+    margin-bottom: 10px;
+    display: inline-block;
+    margin-right: 9px;
+}
+
+.newsletter-area .content .apps-btn a:last-child {
+    margin-right: 0;
+}
+
+.newsletter-area .content .image-shape {
+    position: absolute;
+    visibility: hidden;
+    z-index: -1;
+}
+
+.newsletter-area .content .image-shape-left {
+    top: 0;
+    right: 0;
+}
+
+.newsletter-area .content .image-shape-right {
+    top: 0;
+    left: 0;
+}
+
+.newsletter-area .newsletter-form {
+    position: relative;
+}
+
+.newsletter-area .newsletter-form input {
+    width: 100%;
+    border: 2px solid #dca8a8;
+    border-radius: 23px;
+    background: #fff;
+    font-size: 16px;
+    color: #111;
+    padding: 10px 120px 10px 25px;
+}
+
+.newsletter-area .newsletter-form input::placeholder {
+    color: #dca8a8;
+}
+
+.newsletter-area .newsletter-form button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 6px;
+    font-size: 16px;
+    font-weight: 700;
+    color: #fff;
+    text-transform: uppercase;
+    padding: 6px 10px;
+    background: #dca8a8;
+    border-radius: 25px;
+    transition: all 0.5s ease;
+}
+
+.newsletter-area .newsletter-form button:hover {
+    background: #e76f51;
+}
+
 /* Mobile Responsiveness */
 @media (min-width: 576px) {
 
@@ -1334,6 +1463,22 @@ textarea {
     }
     .product-single-item-style-1 .content .bottom .product-event-items .btn {
         margin-right: 20px;
+    }
+    .newsletter-area .newsletter-form button {
+        padding: 6px 30px;
+    }
+    .newsletter-area .newsletter-form input {
+        padding: 10px 160px 10px 25px;
+    }
+    .newsletter-area .content .apps-btn a {
+        margin-right: 16px;
+        margin-bottom: 0;
+    }
+    .newsletter-area .content {
+        max-width: 490px;
+    }
+    .newsletter-area {
+        padding: 40px 40px;
     }
 }
 
@@ -1388,6 +1533,9 @@ textarea {
     }
     .product-single-item-style-1 .content .bottom .product-event-items .btn {
         margin-right: 10px;
+    }
+    .newsletter-area {
+        padding: 60px 60px;
     }
 }
 
@@ -1457,6 +1605,20 @@ textarea {
     }
     .btn-md {
         padding: 15px 35px;
+    }
+    .newsletter-area .content {
+        max-width: 50%;
+        margin-bottom: 0;
+    }
+    .newsletter-area .content .apps-btn {
+        text-align: right;
+    }
+    .newsletter-area {
+        padding: 50px 50px;
+        flex-direction: row;
+    }
+    .newsletter-area .content-right {
+        text-align: right;
     }
 }
 
@@ -1552,6 +1714,15 @@ textarea {
     .btn-md {
         padding: 15px 50px;
     }
+    .newsletter-area .content .image-shape {
+        visibility: visible;
+    }
+    .newsletter-area {
+        padding: 40px 40px;
+    }
+    .newsletter-area .content {
+        max-width: 420px;
+    }
 }
 
 @media (min-width: 1400px) {
@@ -1589,6 +1760,12 @@ textarea {
     .product-single-item-style-1 .content .bottom .product-event-items .btn {
         margin-right: 20px;
     }
+    .newsletter-area {
+        padding: 60px 60px;
+    }
+    .newsletter-area::after {
+        visibility: visible;
+    }
 }
 
 @media (min-width: 1800px) {
@@ -1611,5 +1788,14 @@ textarea {
 
     .ship-single .content p {
         font-size: 18px;
+    }
+    .newsletter-area .content .image-shape-right {
+        left: -35px;
+    }
+    .newsletter-area .content .image-shape-left {
+        right: -35px;
+    }
+    .newsletter-area {
+        padding: 70px 70px;
     }
 }
