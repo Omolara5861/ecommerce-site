@@ -884,6 +884,30 @@ input, textarea {
     margin-bottom: 20px;
 }
 
+/* *********************** */
+
+.company-slider-bg {
+    background: #dca8a8;
+    border-radius: 30px;
+    padding: 40px 0;
+}
+
+@media (min-width: 768px) {
+    .company-slider-bg {
+        padding: 60px 0;
+    }
+}
+
+@media (min-width: 1400px) {
+    .company-slider-bg {
+        padding: 50px 0;
+    }
+}
+
+.company-slider-single-item .image {
+    text-align: center;
+}
+
 /* Mobile Responsiveness */
 @media (min-width: 576px) {
     .container, .container-sm {
