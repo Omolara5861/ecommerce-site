@@ -89,4 +89,56 @@
             },
         }
     });
+
+        // product slider 
+        var product_slider_3g_2r = new Swiper('.product-slider-3grids-2rows .swiper-container', {
+            slidesPerView: 4,
+            spaceBetween: 25,
+            speed: 1500,
+            slidesPerColumn: 2,
+            slidesPerColumnFill: 'row',
+            navigation: {
+                nextEl: '.center-slider-nav .button-next',
+                prevEl: '.center-slider-nav .button-prev',
+            },
+            breakpoints: {
+                0: {
+                    slidesPerView: 1,
+                },
+                768: {
+                    slidesPerView: 2,
+                },
+                992: {
+                    slidesPerView: 3,
+                },
+                1200: {
+                    slidesPerView: 4,
+                },
+            }
+        });
+        var product_slider_3g_1r = new Swiper('.product-slider-3grids-1row .swiper-container', {
+            slidesPerView: 4,
+            spaceBetween: 25,
+            speed: 1500,
+            loop: true,
+            navigation: {
+                nextEl: '.top-slider-buttons .button-next',
+                prevEl: '.top-slider-buttons .button-prev',
+            },
+            breakpoints: {
+                0: {
+                    slidesPerView: 1,
+                },
+                768: {
+                    slidesPerView: 2,
+                },
+                992: {
+                    slidesPerView: 3,
+                },
+                1200: {
+                    slidesPerView: 4,
+                },
+            }
+        });
+    
 })(jQuery);
