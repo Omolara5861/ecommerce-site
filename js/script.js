@@ -167,4 +167,13 @@ function scrollToTop() {
 }
 scrollToTop();
 
+// *********** price range *********
+    $(".js-range-slider").ionRangeSlider({
+        skin: "round",
+        hide_min_max: true,
+    });
+
+
+    // ***********nice select for dropdown 
+    $('select').niceSelect();
 })(jQuery);
