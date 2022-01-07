@@ -140,5 +140,31 @@
                 },
             }
         });
-    
+// scroll to top 
+function scrollToTop() {
+    var $scrollUp = $("#scroll-to-top"),
+        $lastScrollTop = 0,
+        $window = $(window);
+    $window.on('scroll', function () {
+        var st = $(this).scrollTop();
+        if (st > $lastScrollTop) {
+            $scrollUp.removeClass('show');
+        } else {
+            if ($window.scrollTop() > 120) {
+                $scrollUp.addClass('show');
+            } else {
+                $scrollUp.removeClass('show');
+            }
+        }
+        $lastScrollTop = st;
+    });
+    $scrollUp.on('click', function (evt) {
+        $('html, body').animate({
+            scrollTop: 0
+        }, 50);
+        evt.preventDefault();
+    });
+}
+scrollToTop();
+
 })(jQuery);
